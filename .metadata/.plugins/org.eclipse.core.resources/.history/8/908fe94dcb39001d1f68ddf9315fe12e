@@ -1,0 +1,21 @@
+
+public class Driver {
+
+	public static void main(String[] args) {
+		int number = 8;
+		int remainder = number % 2;
+		//System.out.println(remainder);
+
+		for (int i = 1; i < number; i++) {
+		  int number % 2 = reaminder;
+		}
+			if (remainder == 1 || remainder == number) {
+				System.out.println("Sayı asaldır. ");
+				System.out.print("Sayı : " + number);
+			} else {
+				System.out.println("Sayı asal değildir.");
+			}
+		}
+	}
+
+

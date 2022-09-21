@@ -1,0 +1,22 @@
+
+public class Driver {
+
+	public static void main(String[] args) {
+		int number = 7;
+		int remainder = number % 2;
+
+		for (int i = 1; i < number; i++)
+			;
+
+		if (remainder == 1 & remainder == number ) {
+			System.out.println("Sayı asaldır. ");
+			System.out.println("Sayı : " + number);
+		}if (number==0 ) {
+			System.out.println("Number cannot be 0.");
+		}
+		else {
+			System.out.println("Sayı asal değildir.");
+			System.out.print("Sayı : " + number);
+		}
+	}
+}

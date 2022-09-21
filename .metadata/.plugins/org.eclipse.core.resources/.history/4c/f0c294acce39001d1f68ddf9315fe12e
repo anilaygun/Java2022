@@ -1,0 +1,23 @@
+
+public class Driver {
+
+	public static void main(String[] args) {
+		int number = 23;
+		boolean flag=true;
+		
+		for(int i=2; i<number; i++) {
+			if(number % 2 ==0) {
+				flag=false;
+			}
+		}
+		if(flag==true) {
+			System.out.println("Sayı asaldır.");
+			System.out.println("Sayı : "+number);
+		}else {
+			System.out.println("Sayı asal değildir.");
+			System.out.println("Sayı : "+number);
+		}
+		
+		}
+	}
+
