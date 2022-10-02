@@ -1,0 +1,10 @@
+package methodOverloading;
+
+public class Customer {
+	int id;
+	String fristName;
+	String lastName;
+	int age;
+	String email;
+
+}

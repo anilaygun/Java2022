@@ -1,0 +1,8 @@
+package methodOverloading;
+
+import methodOverloading.Person;
+
+public class Customer extends Person {
+	String email;
+
+}

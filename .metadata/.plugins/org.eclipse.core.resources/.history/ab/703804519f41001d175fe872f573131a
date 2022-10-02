@@ -1,0 +1,39 @@
+package oop1;
+
+public class Driver {
+
+	public static void main(String[] args) {
+Product product1 = new Product();
+product1.name = "Delonghi Kahve Makinesi";
+product1.unitPrice = 7500;
+product1.discount = 7;
+product1.unitsInStocks = 3;
+product1.imageUrl="aaaaaaaaaaaaaaa.jpg";
+
+//
+Product product2 = new Product();
+product2.name = "Smeg Kahve Makinesi";
+product2.unitPrice = 6500;
+product2.discount = 8;
+product2.unitsInStocks = 2;
+product2.imageUrl="aaaaaaaaaaaaaaab.jpg";
+
+//
+Product product3 = new Product();
+product3.name = "Kitchen Kahve Makinesi";
+product3.unitPrice = 4500;
+product3.discount = 9;
+product3.unitsInStocks = 4;
+product3.imageUrl="aaaaaaaaaaaaaaabb.jpg";
+
+//
+Product[] products = {product1, product2, product3};
+for (Product product : products) {
+	System.out.println(product.name);
+}
+
+
+
+
+}
+}

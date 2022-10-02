@@ -1,0 +1,10 @@
+package inheritanceDemo;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		LoanUI loanUI = new LoanUI();
+		loanUI.LoanCalculate(new MilitaryLoanManager());
+	}
+
+}

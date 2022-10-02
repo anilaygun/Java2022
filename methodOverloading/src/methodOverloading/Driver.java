@@ -1,0 +1,11 @@
+package methodOverloading;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		DortIslem dortIslem = new DortIslem();
+		System.out.println(DortIslem.topla(2, 3));
+		System.out.println(DortIslem.topla(2, 3, 4));
+	}
+
+}
