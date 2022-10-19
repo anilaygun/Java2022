@@ -1,0 +1,5 @@
+package kodlamaioWithNLayerApp.business;
+
+public class CategoryManager {
+
+}

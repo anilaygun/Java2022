@@ -1,0 +1,5 @@
+package kodlamaioWithNLayerApp.entities;
+
+public class Educator {
+
+}

@@ -1,0 +1,31 @@
+package kodlamaioWithNLayerApp.business;
+
+import java.lang.System.Logger;
+
+import kodlamaioWithNLayerApp.core.logging.ILogger;
+import kodlamaioWithNLayerApp.dataAccess.IEducatorDao;
+import kodlamaioWithNLayerApp.entities.Course;
+import kodlamaioWithNLayerApp.entities.Educator;
+
+public class EducatorManager {
+	private IEducatorDao iEducatorDao;
+	private ILogger[] loggers;
+
+	public EducatorManager(IEducatorDao iEducatorDao, ILogger[] loggers) {
+		this.iEducatorDao = iEducatorDao;
+		this.loggers = loggers;
+	}
+
+		public void add(Educator educator)throws Exception {
+		 			if(educator.getfName().equalsIgnoreCase(educator.getfName()))  {
+				throw new Exception("Eğitmen adı aynı olamaz.");
+			}
+		 			
+		 	iEducatorDao.add(educator);
+		 	for (ILogger iLogger : loggers) {
+				iLogger.log(educator.getfName());
+	}
+
+	// İŞ KURALLARI
+}
+}

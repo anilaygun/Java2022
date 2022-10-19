@@ -1,0 +1,18 @@
+package kodlamaioWithNLayerApp.business;
+
+import java.lang.System.Logger;
+
+import kodlamaioWithNLayerApp.core.logging.ILogger;
+import kodlamaioWithNLayerApp.dataAccess.ICategoryDao;
+
+public class CategoryManager {
+	private ICategoryDao iCategoryDao;
+	private ILogger[] loggers;
+
+	public CategoryManager(ICategoryDao iCategoryDao, ILogger[] loggers) {
+		this.iCategoryDao = iCategoryDao;
+	}
+
+	// İŞ KURALLARI
+
+}

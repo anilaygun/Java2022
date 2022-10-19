@@ -1,0 +1,13 @@
+package kodlamaioWithNLayerApp.business;
+
+import kodlamaioWithNLayerApp.dataAccess.IEducatorDao;
+
+public class EducatorManager {
+	private IEducatorDao iEducatorDao;
+
+	public EducatorManager(IEducatorDao iEducatorDao) {
+		this.iEducatorDao = iEducatorDao;
+	}
+
+	// İŞ KURALLARI
+}

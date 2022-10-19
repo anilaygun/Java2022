@@ -1,0 +1,5 @@
+package kodlamaioWithNLayerApp.core.logging;
+
+public class MailLogger {
+
+}

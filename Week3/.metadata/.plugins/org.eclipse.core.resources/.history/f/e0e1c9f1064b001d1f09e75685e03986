@@ -1,0 +1,37 @@
+package kodlamaioWithNLayerApp.business;
+
+import java.lang.System.Logger;
+import java.util.List;
+
+import kodlamaioWithNLayerApp.core.logging.ILogger;
+import kodlamaioWithNLayerApp.dataAccess.ICategoryDao;
+import kodlamaioWithNLayerApp.entities.Category;
+
+public class CategoryManager {
+	private ICategoryDao iCategoryDao;
+	private ILogger[] loggers;
+	private List<Category> categories;
+
+	public CategoryManager(ICategoryDao iCategoryDao, ILogger[] loggers, List<Category> categories) {
+		this.iCategoryDao = iCategoryDao;
+		this.loggers = loggers;
+		this.categories=categories;
+
+	}
+
+	public void add(Category category) throws Exception {
+		for(Category categories : categories){
+            if (categories.getCategoryName()==category.getCategoryName()){
+                throw  new Exception("Aynı kategori ismi kullanılamaz");
+            
+		s
+		
+		iCategoryDao.add(category);
+		for (ILogger iLogger : loggers) {
+			iLogger.log(category.getCategoryName());
+		}
+
+	}
+}
+	}
+}

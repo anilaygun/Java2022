@@ -1,0 +1,9 @@
+package kodlamaioWithNLayerApp.dataAccess.jdbc;
+
+import kodlamaioWithNLayerApp.entities.Educator;
+
+public class JdbcEducatorDao {
+	public void add(Educator educator) {
+		System.out.println(educator.getfName() + "İsimli eğitmen Jdbc ile eklendi.");
+	}
+}

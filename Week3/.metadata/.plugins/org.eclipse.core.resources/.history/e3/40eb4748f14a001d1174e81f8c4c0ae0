@@ -1,0 +1,16 @@
+package kodlamaioWithNLayerApp;
+
+import kodlamaioWithNLayerApp.business.CourseManager;
+import kodlamaioWithNLayerApp.entities.Course;
+
+public class Driver {
+
+	public static void main(String[] args) throws Exception {
+		Course course1 = new Course("Java", 1, 0);
+		CourseManager courseManager = new CourseManager();
+		courseManager.add(course1);
+		
+
+	}
+
+}

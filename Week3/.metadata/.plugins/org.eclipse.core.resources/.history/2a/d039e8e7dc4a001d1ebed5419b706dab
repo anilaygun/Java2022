@@ -1,0 +1,10 @@
+package kodlamaioWithNLayerApp.dataAccess.jdbc;
+
+import kodlamaioWithNLayerApp.entities.Courses;
+
+public class JdbcCourseDao {
+	public void add(Courses courses) {
+		System.out.println(courses.getCourseName() + "kursu eklendi");
+	}
+
+}

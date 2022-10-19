@@ -1,0 +1,63 @@
+package kodlamaioWithNLayerApp;
+
+import java.lang.System.Logger;
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlamaioWithNLayerApp.business.CategoryManager;
+import kodlamaioWithNLayerApp.business.CourseManager;
+import kodlamaioWithNLayerApp.business.EducatorManager;
+import kodlamaioWithNLayerApp.core.logging.ConsolLogger;
+import kodlamaioWithNLayerApp.core.logging.DatabaseLogger;
+import kodlamaioWithNLayerApp.core.logging.FileLogger;
+import kodlamaioWithNLayerApp.core.logging.ILogger;
+import kodlamaioWithNLayerApp.core.logging.MailLogger;
+import kodlamaioWithNLayerApp.dataAccess.hibernate.HibernateCategoryDao;
+import kodlamaioWithNLayerApp.dataAccess.hibernate.HibernateCourseDao;
+import kodlamaioWithNLayerApp.dataAccess.hibernate.HibernateEducatorDao;
+import kodlamaioWithNLayerApp.dataAccess.jdbc.JdbcCategoryDao;
+import kodlamaioWithNLayerApp.dataAccess.jdbc.JdbcCourseDao;
+import kodlamaioWithNLayerApp.dataAccess.jdbc.JdbcEducatorDao;
+import kodlamaioWithNLayerApp.entities.Category;
+import kodlamaioWithNLayerApp.entities.Course;
+import kodlamaioWithNLayerApp.entities.Educator;
+
+public class Driver {
+
+	public static void main(String[] args) throws Exception {
+		ILogger[] loggers = { new DatabaseLogger(), new MailLogger(), new ConsolLogger(), new FileLogger() };
+
+		System.out.println("----------------");
+		System.out.println(" KURSLAR ");
+		System.out.println("----------------");
+		Course course1 = new Course("Java", 1, 20);
+		CourseManager courseManager = new CourseManager(new JdbcCourseDao(), loggers);
+		courseManager.add(course1);
+
+		System.out.println(" EĞİTMEN ");
+		System.out.println("------------------------");
+
+		List<Educator> educators = new ArrayList<>();
+		Educator educator1 = new Educator(1, "Engin", "Demiroğ");
+		Educator educator2 = new Educator(1, "Engin", "Demiroğ");
+
+		EducatorManager educatorManager = new EducatorManager(new JdbcEducatorDao(), loggers, educators);
+		educatorManager.add(educator1);
+		educatorManager.add(educator2);
+
+		System.out.println("--------------");
+		System.out.println(" KATEGORİ ");
+		System.out.println("--------------");
+
+		Category category1 = new Category("Programlama1", 1);
+		Category category2 = new Category("Programlama2", 2);
+		Category category3 = new Category("Programlama", 3);
+
+		List<Category> categories = new ArrayList<>();
+		CategoryManager categoryManager = new CategoryManager(new HibernateCategoryDao(), loggers, categories);
+		categoryManager.add(category1);
+		categoryManager.add(category2);
+		categoryManager.add(category3);
+	}
+
+}

@@ -1,0 +1,5 @@
+package kodlamaioWithNLayerApp.dataAccess;
+
+public interface IEducatorDao {
+
+}

@@ -1,0 +1,23 @@
+package kodlamaioWithNLayerApp;
+
+import java.lang.System.Logger;
+import java.util.List;
+
+import kodlamaioWithNLayerApp.business.CourseManager;
+import kodlamaioWithNLayerApp.core.logging.DatabaseLogger;
+import kodlamaioWithNLayerApp.dataAccess.hibernate.HibernateCourseDao;
+import kodlamaioWithNLayerApp.dataAccess.jdbc.JdbcCourseDao;
+import kodlamaioWithNLayerApp.entities.Course;
+
+public class Driver {
+
+	public static void main(String[] args) throws Exception {
+		Course course1 = new Course("Java", 1, 20);
+		List<Logger> loggers = {new DatabaseLogger()};
+		CourseManager courseManager = new CourseManager(new HibernateCourseDao());
+		courseManager.add(course1);
+		
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package kodlamaioWithNLayerApp.business;
+
+import kodlamaioWithNLayerApp.dataAccess.ICategoryDao;
+
+public class CategoryManager {
+	private ICategoryDao iCategoryDao;
+
+	public CategoryManager(ICategoryDao iCategoryDao) {
+		this.iCategoryDao = iCategoryDao;
+	}
+
+	// İŞ KURALLARI
+
+}

@@ -1,0 +1,18 @@
+package kodlamaioWithNLayerApp;
+
+import kodlamaioWithNLayerApp.business.CourseManager;
+import kodlamaioWithNLayerApp.dataAccess.hibernate.HibernateCourseDao;
+import kodlamaioWithNLayerApp.dataAccess.jdbc.JdbcCourseDao;
+import kodlamaioWithNLayerApp.entities.Course;
+
+public class Driver {
+
+	public static void main(String[] args) throws Exception {
+		Course course1 = new Course("Java", 1, 20);
+		CourseManager courseManager = new CourseManager(new HibernateCourseDao());
+		courseManager.add(course1);
+		
+
+	}
+
+}

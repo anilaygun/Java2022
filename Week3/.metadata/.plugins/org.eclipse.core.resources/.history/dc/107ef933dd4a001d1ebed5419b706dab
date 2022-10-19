@@ -1,0 +1,5 @@
+package kodlamaioWithNLayerApp.dataAccess.hibernate;
+
+public class HibernateEducatorDao {
+
+}

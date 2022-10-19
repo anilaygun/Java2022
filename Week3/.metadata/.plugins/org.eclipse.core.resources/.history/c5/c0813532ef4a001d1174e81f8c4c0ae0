@@ -1,0 +1,32 @@
+package kodlamaioWithNLayerApp.business;
+
+import kodlamaioWithNLayerApp.dataAccess.jdbc.JdbcCourseDao;
+import kodlamaioWithNLayerApp.entities.Course;
+
+public class CourseManager {
+	public void add(Course course) throws Exception {
+		if (course.getUnitPrice() <= 0) {
+			throw new Exception("Ürün fiyatı geçersiz.");
+		}
+
+		for (Course crs : courses) {
+
+            if (crs.getCourseName().equals(course.getCourseName())) {
+                throw new Exception("Kurs ismi birbirini tekrar edemez");
+
+            }
+        
+		
+
+		/*
+		 * try { if (course.getUnitPrice() <= 0) ; } catch (Exception e) {
+		 * System.out.println(e.getMessage()+ "Kursun fiytı 0 dan büyük olmalıdır!"); }
+		 * 
+		 * try { if (course.getCourseName().equalsIgnoreCase(course.getCourseName())) ;
+		 * } catch (Exception e) { System.out.println("Kurs ismi aynı olamaz"); }
+		 */
+		JdbcCourseDao jdbcCourseDao = new JdbcCourseDao();
+		jdbcCourseDao.add(course);
+	}
+}
+}

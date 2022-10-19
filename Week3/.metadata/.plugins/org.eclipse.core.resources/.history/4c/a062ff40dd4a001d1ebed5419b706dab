@@ -1,0 +1,10 @@
+package kodlamaioWithNLayerApp.dataAccess.hibernate;
+
+import kodlamaioWithNLayerApp.entities.Category;
+
+public class HibernateCategoryDao {
+	public void add(Category category) {
+		System.out.println(category.getCategoryName() + " kategorisi Jdbc ile eklendi");
+
+	}
+}

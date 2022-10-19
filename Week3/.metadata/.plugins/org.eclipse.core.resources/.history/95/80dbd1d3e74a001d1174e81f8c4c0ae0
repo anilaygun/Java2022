@@ -1,0 +1,17 @@
+package kodlamaioWithNLayerApp;
+
+import kodlamaioWithNLayerApp.business.CourseManager;
+import kodlamaioWithNLayerApp.entities.Course;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Course course1 = new Course("Java",1,20);
+		Course course2 = new Course("Java2",1,20);
+		CourseManager courseManager = new CourseManager();
+		courseManager.add(course1);
+		courseManager.add(course2);
+
+	}
+
+}

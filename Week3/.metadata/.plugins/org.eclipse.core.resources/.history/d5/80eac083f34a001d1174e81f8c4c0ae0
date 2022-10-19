@@ -1,0 +1,9 @@
+package kodlamaioWithNLayerApp.dataAccess.hibernate;
+
+import kodlamaioWithNLayerApp.entities.Educator;
+
+public class HibernateEducatorDao {
+	public void add(Educator educator) {
+		System.out.println(educator.getfName() + "İsimli eğitmen Hibernate ile eklendi.");
+	}
+}

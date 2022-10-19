@@ -1,0 +1,17 @@
+package kodlamaioWithNLayerApp.business;
+
+import java.lang.System.Logger;
+
+import kodlamaioWithNLayerApp.core.logging.ILogger;
+import kodlamaioWithNLayerApp.dataAccess.IEducatorDao;
+
+public class EducatorManager {
+	private IEducatorDao iEducatorDao;
+	private ILogger[] loggers;
+
+	public EducatorManager(IEducatorDao iEducatorDao, ILogger[] loggers) {
+		this.iEducatorDao = iEducatorDao;
+	}
+
+	// İŞ KURALLARI
+}
